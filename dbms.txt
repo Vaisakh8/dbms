@@ -11,7 +11,7 @@ blood_grp varchar(3) not null
 );
 
 create table staff
-(s_id serial primary key,
+(st_id serial primary key,
 name varchar(20) not null,
 dept varchar(20) not null,
 desg varchar(20) not null,
