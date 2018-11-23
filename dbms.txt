@@ -20,14 +20,28 @@ phone varchar(10) not null,
 email varchar(20) not null
 );
 
+
 create table exam
 (regno int,
+name varchar(20),
+c_id int,
 type varchar(30) not null,
 subject varchar(20) not null,
 s_id varchar(10) not null,
 mark int not null
 );
 
+create table class_
+(
+c_id serial primary key,
+class varchar(20),
+sem int,
+strength int);
+
+
+insert into exam(regno,name,c_id,type,subject,s_id,mark)
+values(1,'adish',1,'series','calculus','ma201',50),(1,'adish',1,'series','chemistry','ch201',53),(1,'adish',1,'series','physics','ph201',21),(2,'vg',1,'series','calculus','ma201',32),(2,'vg',1,'series','chemistry','ch201',34),(2,'vg',1,'series','physics','ph201',45),
+(3,'bala',1,'series','calculus','ma201',12),(3,'bala',1,'series','english','en201',63),(3,'bala',1,'series','maths','m201',54);
 create table teacher
 (t_id serial primary key,
 name varchar(20) not null,
@@ -43,8 +57,7 @@ values ('adish','1','a@','a',1,1,'IT','O+'),('bala','1','b@','a',1,1,'Mech','O+'
 insert into staff (name,dept,desg,addr,phone,email)
 values ('pramod','a','b','addr','phone','mail'),('irfan','a','c','addr','phone','mail'),('afrin','d','e','addr','phone','mail'),('renjith','d','f','addr','phone','mail'),('arfan','g','h','addr','phone','mail'),('ravi','g','i','addr','phone','mail');
 
-insert into exam(regno,type,subject,s_id,mark)
-values(1,'series 1','calculus','ma201',50),(2,'series 1','calculus','ma201',45),(3,'series 1','DE','ma202',50),(4,'series 1','DE','ma202',30),(5,'series 1','LACA','ma203',50),(6,'series 1','LACA','ma203',48),(7,'series 1','maths','ma204',39),(8,'series 1','maths','ma204',50),(9,'series 1','LACA','ma203',42);
+
 
 
 insert into teacher (name,dept,addr,phone,email)
