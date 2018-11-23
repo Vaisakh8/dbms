@@ -22,7 +22,7 @@ email varchar(20) not null
 
 
 create table exam
-(regno int,
+(reg_no int,
 name varchar(20),
 c_id int,
 type varchar(30) not null,
@@ -40,14 +40,16 @@ strength int);
 
 
 insert into exam(regno,name,c_id,type,subject,s_id,mark)
-values(1,'adish',1,'series','calculus','ma201',50),(1,'adish',1,'series','chemistry','ch201',53),(1,'adish',1,'series','physics','ph201',21),(2,'vg',1,'series','calculus','ma201',32),(2,'vg',1,'series','chemistry','ch201',34),(2,'vg',1,'series','physics','ph201',45),
-(3,'bala',1,'series','calculus','ma201',12),(3,'bala',1,'series','english','en201',63),(3,'bala',1,'series','maths','m201',54);
+values(1,'adish',1,'series','calculus','ma201',50),(1,'adish',1,'series','chemistry','ch201',53),(1,'adish',1,'series','physics','ph201',21),(6,'vg',2,'series','calculus','ma201',32),(6,'vg',2,'series','chemistry','ch201',34),(6,'vg',2,'series','physics','ph201',45),
+(2,'bala',3,'series','calculus','ma201',12),(2,'bala',3,'series','chemistry','ch201',63),(2,'bala',3,'series','phhysics','ph201',54);
+
 create table teacher
 (t_id serial primary key,
 name varchar(20) not null,
 dept varchar(20) not null,
 addr varchar(20) not null,
 phone  varchar(20) not null,
+sal int not null,
 email varchar(20) not null
 );
 
